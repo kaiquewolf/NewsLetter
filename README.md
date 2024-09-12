@@ -1,6 +1,3 @@
-Aqui está a versão atualizada do README com emojis para dar mais ênfase e deixá-lo mais visualmente agradável:
-
----
 
 # 📧 Newsletter Marketplace 🛒
 
@@ -48,5 +45,3 @@ Este é um projeto de uma aplicação web simples de **newsletter** integrada co
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma [issue](https://github.com/seu-usuario/newsletter-marketplace/issues) ou fazer um _fork_ do projeto para melhorias.
 
 ---
-
-Agora o README ficou mais atrativo e visualmente dinâmico com os emojis!
