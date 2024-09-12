@@ -63,8 +63,6 @@ main {
     text-align: start;
 }
 
-
-
 aside {
     padding: 0 0 0 60px;
 }
@@ -107,3 +105,35 @@ form button {
     cursor: pointer;
 }
 
+section  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+section span {
+   position: relative;
+}
+
+section span::before{
+    content: "";
+    position: absolute;
+    right: 200px;
+    top: 50%;
+    transform: translateY(-50%); /* Alinha verticalmente com o texto */
+    width: 400px; /* Tamanho da linha */
+    height: 2px; /* Espessura da linha */
+    background-color: #707070; /* Cor da linha */
+}
+
+section span::after{
+    content: "";
+    position: absolute;
+    left: 200px;
+    top: 50%;
+    transform: translateY(-50%); /* Alinha verticalmente com o texto */
+    width: 400px; /* Tamanho da linha */
+    height: 2px; /* Espessura da linha */
+    background-color: #707070; /* Cor da linha */
+}
