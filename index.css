@@ -3,6 +3,13 @@
     padding: 0;
 }
 
+body {
+    min-width: 800px;
+    min-height: 600px;
+    background-color: #FFFF;
+    color: #888888;
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -10,14 +17,15 @@ header {
     background-color: #707070;
     color: #FFFF;
     width: 100%;
-    height: 45vh;
+    height: 55vh;
     padding-top: 40px;
-    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 87%); */
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
 
 }
 
-header h1 , span , nav {
+header h1,
+header p,
+header nav {
     font-weight: 100;
     margin-top: 20px;
 }
@@ -48,26 +56,34 @@ header nav button {
     cursor: pointer;
 }
 
-body {
-    background-color: #FFFF;
-    color: #707070;
-}
 
 main {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    margin: 100px 20% 0 10%;
+    align-items: center;
+    margin: 21px 290px 0px 290px;
     font-size: 12px;
     letter-spacing: 1px;
     text-align: start;
+}
+
+#layoutMain {
+    display: flex;
+    flex-direction: row;
+}
+
+.p-algoritimo {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 aside {
     padding: 0 0 0 60px;
 }
 
-form {
+.cadastro form {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -75,17 +91,17 @@ form {
     width: 300px;
 }
 
-form div {
+.cadastro form div {
     display: flex;
     width: 100%;
     justify-content: left;
 }
 
-form div #feminino {
+.cadastro form div #feminino {
     margin-left: 50px;
 }
 
-form div label {
+.cadastro form div label {
     margin-left: 7px;
 }
 
@@ -96,44 +112,210 @@ form div label {
     border: 1px solid #707070;
 }
 
-form button {
+.cadastro form button {
     margin-top: 20px;
     width: 100%;
     height: 30px;
+    color: #888888;
     border: 1px solid #707070;
     border-radius: 4px;
     cursor: pointer;
 }
 
-section  {
+#section {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-section span {
-   position: relative;
+#section h2 {
+    margin-top: 79px;
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-section span::before{
+#section h2::before {
     content: "";
     position: absolute;
     right: 200px;
     top: 50%;
-    transform: translateY(-50%); /* Alinha verticalmente com o texto */
-    width: 400px; /* Tamanho da linha */
-    height: 2px; /* Espessura da linha */
-    background-color: #707070; /* Cor da linha */
+    transform: translateY(-50%);
+    /* Alinha verticalmente com o texto */
+    width: 350px;
+    /* Tamanho da linha */
+    height: 2px;
+    /* Espessura da linha */
+    background-color: #888888;
+    /* Cor da linha */
 }
 
-section span::after{
+#section h2::after {
     content: "";
     position: absolute;
     left: 200px;
     top: 50%;
-    transform: translateY(-50%); /* Alinha verticalmente com o texto */
-    width: 400px; /* Tamanho da linha */
-    height: 2px; /* Espessura da linha */
-    background-color: #707070; /* Cor da linha */
+    transform: translateY(-50%);
+    /* Alinha verticalmente com o texto */
+    width: 350px;
+    /* Tamanho da linha */
+    height: 2px;
+    /* Espessura da linha */
+    background-color: #888888;
+    /* Cor da linha */
+}
+
+.produtos {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 49px;
+    row-gap: 45px;
+
+}
+
+.retangulo {
+    width: 200px;
+    height: 150px;
+    border: 1px solid #707070;
+    margin-top: 40px;
+}
+
+.produtos h3 {
+    padding-top: 14px;
+}
+
+.produtos .descricaoDoProduto {
+    padding-top: 10px;
+}
+
+.precoPromocional {
+    padding-top: 6px;
+}
+
+.parcelamento {
+    padding-top: 7px;
+}
+
+.produtos button {
+    width: 100%;
+    height: 30px;
+    margin-top: 14px;
+    color: #888888;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.botaoMaisProdutos {
+    margin-top: 52px;
+    width: 260px;
+    height: 39px;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    color: #888888;
+    cursor: pointer;
+}
+
+.compartilhe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.compartilhe h2 {
+    margin-top: 79px;
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.compartilhe h2::before {
+    content: "";
+    position: absolute;
+    right: 250px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Alinha verticalmente com o texto */
+    width: 350px;
+    /* Tamanho da linha */
+    height: 2px;
+    /* Espessura da linha */
+    background-color: #888888;
+    /* Cor da linha */
+}
+
+.compartilhe h2::after {
+    content: "";
+    position: absolute;
+    left: 250px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Alinha verticalmente com o texto */
+    width: 350px;
+    /* Tamanho da linha */
+    height: 2px;
+    /* Espessura da linha */
+    background-color: #888888;
+    /* Cor da linha */
+}
+
+.compartilhe p {
+    margin-top: 44px;
+    color: #888888;
+}
+
+.compartilhe form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.compartilhe form div {
+    display: flex;
+    flex-direction: row;
+}
+
+.compartilhe form div .layout-personalizado {
+    margin-top: 39px;
+}
+
+.compartilhe form .layout-personalizado {
+    display: initial;
+    margin-right: 40px;
+}
+
+
+.compartilhe input {
+    width: 340px;
+    height: 20px;
+    border: 1px solid #707070;
+}
+
+.compartilhe form button {
+    margin-top: 50px;
+    width: 260px;
+    height: 39px;
+    color: #888888;
+    border: 1px solid #707070;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 72px;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 12px;
+    align-items: center;
+    background-color: #707070;
+    min-width: 830px;
+    height: 30vh;
+    padding-top: 40px;
+    clip-path: polygon(0 21%, 100% 0, 100% 100%, 0% 100%);
 }
