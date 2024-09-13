@@ -319,3 +319,71 @@ footer {
     padding-top: 40px;
     clip-path: polygon(0 21%, 100% 0, 100% 100%, 0% 100%);
 }
+
+@media only screen and (max-width: 421px) {
+    body{
+        min-width: auto;
+        min-height: auto;
+    }
+
+    header {
+        align-items: start;
+        justify-content: left;
+        min-width: 418px;
+        padding-top: 0;
+    }
+
+    
+    header h1,
+    header p,
+    header nav {
+        margin: 0 46px 0 16px;
+    }
+    
+    header nav {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 32px;
+        column-gap: 21px;
+        margin: 56px 41px 0 38px;
+    }
+    header h1 {
+        font-size: 40px;
+        font-weight: bold;
+        margin-top: 0px;
+    }
+
+    header #subtitulo {
+        margin-top: 66px;
+    }
+
+    header p {
+        max-width: 412px;
+        overflow-wrap: break-word;
+        font-size: 14px;
+    }
+
+    header nav button {
+        margin: 0;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin: 29px 18px 0 16px;
+        max-width: 412px;
+    }
+
+    #layoutMain {
+        display: initial;
+    }
+
+    main .cadastro {
+
+        margin-top: 29px;
+    }
+
+    
+}
