@@ -17,7 +17,7 @@ header {
     background-color: #707070;
     color: #FFFF;
     width: 100%;
-    height: 55vh;
+    height: 50vh;
     padding-top: 40px;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
 
@@ -127,6 +127,7 @@ aside {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
 }
 
 #section h2 {
@@ -279,12 +280,9 @@ aside {
 }
 
 .compartilhe form div .layout-personalizado {
-    margin-top: 39px;
-}
-
-.compartilhe form .layout-personalizado {
     display: initial;
     margin-right: 40px;
+    margin-top: 39px;
 }
 
 
@@ -320,10 +318,11 @@ footer {
     clip-path: polygon(0 21%, 100% 0, 100% 100%, 0% 100%);
 }
 
-@media only screen and (max-width: 421px) {
+@media only screen and (max-width: 430px) {
     body{
         min-width: auto;
         min-height: auto;
+        max-width: 100%;
     }
 
     header {
@@ -381,9 +380,106 @@ footer {
     }
 
     main .cadastro {
-
+        padding: 0;
         margin-top: 29px;
     }
 
-    
+    main .cadastro form {
+        width: 100%;
+    }
+
+
+    #section h2::after {
+        width: 20%;
+        /* Tamanho da linha */
+    }
+
+   .produtos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    width: 100%;
+   }
+
+   .conteudoProduto {
+    display: flex;
+    flex-direction: row;  
+}
+
+.info-produto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.info-produto button {
+    width: 50vw;
+}
+
+.descricaoDoProduto {
+    display: none;
+}
+
+.retangulo {
+    width: 169px;
+    height: 129px;
+    margin-top: 23px;
+    margin-right: 23px;
+}
+
+.precoPromocional {
+    font-size: 16px;
+}
+
+.info-produto h3 {
+    margin-bottom: 13px;
+}
+
+.compartilhe {
+    flex-direction: column;
+    width: 100%;
+}
+
+.compartilhe h2::after {
+    width: 50%;
+    /* Tamanho da linha */
+}
+
+.compartilhe p {
+    margin: 28px 0 28px 0;
+}
+
+
+.compartilhe form div {
+    width: 100%;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.compartilhe form div .layout-personalizado {
+    margin-top: 20px;
+    margin-right: 0px;
+}
+
+.compartilhe input {
+    padding-top: 7px;
+    width: 100%;
+    height: 30px;
+}
+
+.compartilhe form button {
+    width: 260px;
+    height: 39px;
+    margin-top: 42px;
+}
+
+footer {
+   min-width: 400px;
+   height: 25vh;
+   padding-top: initial;
+}
+
 }
