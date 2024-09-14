@@ -64,13 +64,13 @@
             <aside class="cadastro">
                 <form action="" name="fomulário de cadastro">
                     <label for="name">Seu nome:</label>
-                    <input type="text" name="name" id="name" class="data" autocomplete="off">
+                    <input type="text" name="name" id="name" class="data" autocomplete="off" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ]+(?: [A-Za-zÀ-ÖØ-öø-ÿ]+)*$" title="Por favor, insira um nome válido" required>
 
                     <label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email" class="data" autocomplete="off">
+                    <input type="email" name="email" id="email" class="data" autocomplete="off"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, insira um email válido" required>
 
                     <label for="CPF">CPF:</label>
-                    <input type="text" name="CPF" id="CPF" class="data" autocomplete="off">
+                    <input type="text" name="CPF" id="CPF" class="data" autocomplete="off" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" title="Digite um CPF no formato 000.000.000-00" required>
 
                     <div>
                         <input type="radio" name="sexo" value="masculino" id="masculino" autocomplete="off">
@@ -204,11 +204,11 @@
                     <div>
                         <div class="layout-personalizado">
                             <label for="nome-amigo"> Nome do seu amigo: </label><br>
-                            <input type="text" name="name" id="nome-amigo" autocomplete="off" autocomplete="off">
+                            <input type="text" name="name" id="nome-amigo" autocomplete="off" autocomplete="off" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ]+(?: [A-Za-zÀ-ÖØ-öø-ÿ]+)*$" title="Por favor, insira um nome válido" required>
                         </div>
                         <div class="layout-personalizado">
                             <label for="email-amigo">E-mail: </label><br>
-                            <input type="email" name="email" id="email-amigo" autocomplete="off" autocomplete="off">
+                            <input type="email" name="email" id="email-amigo" autocomplete="off" autocomplete="off" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Por favor, insira um email válido" required>
                         </div>
                     </div>
                     <button type="submit"> Enviar agora</button>

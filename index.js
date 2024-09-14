@@ -23,8 +23,6 @@ async function fetchData() {
                 switchModal()
             }
         }
-        console.error('Erro ao buscar dados: ', error);
-
     }
 }
 
@@ -109,6 +107,7 @@ async function addNextPage() {
         divConteudo.insertBefore(div, null);
     })
 }
+
 
 const switchModal = () => {
     const modal = document.querySelector('.modal');
