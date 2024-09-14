@@ -1,9 +1,8 @@
-const baseUrl = "https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1"
-let currentPage = 1; // Página inicial
-const itemsPerPage = 8; // Itens por página
+let baseUrl = "https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1"
 
-async function fetchData(page, limit) {
-    const url = `${baseUrl}?page=${page}&limit=${limit}`;
+
+async function fetchData() {
+    const url = `${baseUrl}`;
 
     try {
         const response = await fetch(url);
@@ -23,11 +22,18 @@ async function fetchData(page, limit) {
 
 function itemsInitialPage(products) {
 
-    products.products.map(function(produto) {
-        return (
-            page.innerHTML =
+
+    divConteudo = document.getElementById('produtos');
+    divConteudo.innerText = "";
+
+
+    products.products.map(function (produto) {
+
+        const div = document.createElement('div');
+        div.classList.add('conteudoProduto');
+
+        div.innerHTML =
             `
-            <div class="conteudoProduto">
                                     <div class="retangulo">
                                         <img src=${produto.image} alt="Imagem demonstrativa do produto">
                                     </div>
@@ -35,18 +41,17 @@ function itemsInitialPage(products) {
                                         <h3>${produto.name}</h3>
                                         <p class="descricaoDoProduto">${produto.description}
                                         <p>De: R$ ${produto.oldPrice}</p>
-                                        <p class="precoPromocional"><strong>Por: R$ ${products.price} </strong></p>
-                                        <p class="parcelamento">ou ${console.log(produto.name)}x de R$ </p>
+                                        <p class="precoPromocional"><strong>Por: R$ ${produto.price} </strong></p>
+                                        <p class="parcelamento">ou ${produto.installments.count}x de R$ ${produto.installments.value}</p>
                                         <button type="button">Comprar</button>
-                                    </div>
                     `
-        );
-   })
+        divConteudo.appendChild(div);
+    })
 };
 
 // Função para carregar Página inicial
 async function loadInitialPage() {
-    const data = await fetchData(currentPage, itemsPerPage);
+    const data = await fetchData();
 
 
     // Exibir os dados na interface
@@ -62,9 +67,40 @@ async function loadInitialPage() {
 
 
 async function addNextPage() {
-    data = await fetchData(currentPage, itemsPerPage);
-    console.log("funcionando")
+    
+    divConteudo = document.getElementById('produtos');
+    
+    data = await fetchData();
+    console.log(data);
+
+    baseUrl = data.nextPage;
+
+
+
+    data.products.map(function (produto) {
+
+        const div = document.createElement('div');
+        div.classList.add('conteudoProduto');
+
+        div.innerHTML =
+            `
+                                    <div class="retangulo">
+                                        <img src=${produto.image} alt="Imagem demonstrativa do produto">
+                                    </div>
+                                    <div class="info-produto">
+                                        <h3>${produto.name}</h3>
+                                        <p class="descricaoDoProduto">${produto.description}
+                                        <p>De: R$ ${produto.oldPrice}</p>
+                                        <p class="precoPromocional"><strong>Por: R$ ${produto.price} </strong></p>
+                                        <p class="parcelamento">ou ${produto.installments.count}x de R$ ${produto.installments.value}</p>
+                                        <button type="button">Comprar</button>
+                    `
+                    divConteudo.insertBefore(div, null);
+    })
+
 }
 
 
-loadInitialPage(); // Carrega a primeira página de itens
+// Carrega a primeira página de itens
+loadInitialPage();
+

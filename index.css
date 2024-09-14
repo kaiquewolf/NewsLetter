@@ -179,7 +179,7 @@ aside {
 .retangulo {
     width: 200px;
     height: 150px;
-    border: 1px solid #707070;
+    border: none;
     margin-top: 40px;
 }
 
@@ -192,6 +192,7 @@ aside {
 }
 
 .precoPromocional {
+    font-size: 16px;
     padding-top: 6px;
 }
 
@@ -427,6 +428,7 @@ footer {
         height: 129px;
         margin-top: 23px;
         margin-right: 23px;
+        border: none;
     }
 
     .precoPromocional {
