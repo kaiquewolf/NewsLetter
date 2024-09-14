@@ -64,18 +64,18 @@
             <aside class="cadastro">
                 <form action="" name="fomulário de cadastro">
                     <label for="name">Seu nome:</label>
-                    <input type="text" name="name" id="name" class="data">
+                    <input type="text" name="name" id="name" class="data" autocomplete="off">
 
                     <label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email" class="data">
+                    <input type="email" name="email" id="email" class="data" autocomplete="off">
 
                     <label for="CPF">CPF:</label>
-                    <input type="text" name="CPF" id="CPF" class="data">
+                    <input type="text" name="CPF" id="CPF" class="data" autocomplete="off">
 
                     <div>
-                        <input type="radio" name="sexo" value="masculino" id="masculino">
+                        <input type="radio" name="sexo" value="masculino" id="masculino" autocomplete="off">
                         <label for="masculino"> masculino</label>
-                        <input type="radio" name="sexo" value="feminino" id="feminino">
+                        <input type="radio" name="sexo" value="feminino" id="feminino" autocomplete="off">
                         <label for="feminino"> feminino</label>
                     </div>
                     <button type="submit"> Enviar</button>
@@ -190,7 +190,7 @@
                     </div>
                 </div>
             </article>
-            <button type="button" class="botaoMaisProdutos"> Ainda mais Produtos aqui!</button>
+            <button type="button" class="botaoMaisProdutos" onclick="addNextPage()"> Ainda mais Produtos aqui!</button>
         </section>
 
         <section>
@@ -202,11 +202,11 @@
                     <div>
                         <div class="layout-personalizado">
                             <label for="nome-amigo"> Nome do seu amigo: </label><br>
-                            <input type="text" name="name" id="nome-amigo">
+                            <input type="text" name="name" id="nome-amigo" autocomplete="off" autocomplete="off">
                         </div>
                         <div class="layout-personalizado">
                             <label for="email-amigo">E-mail: </label><br>
-                            <input type="email" name="email" id="email-amigo">
+                            <input type="email" name="email" id="email-amigo" autocomplete="off" autocomplete="off">
                         </div>
                     </div>
                     <button type="submit"> Enviar agora</button>
@@ -221,6 +221,6 @@
             Testando suas habilidades em HTML, CSS e JS. <br> Linx Impulse <br> 2019
         </p>
     </footer>
+    <script src="/index.js"></script>
 </body>
-
 </html>

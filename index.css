@@ -169,8 +169,8 @@ aside {
 
 .produtos {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: row;
     column-gap: 49px;
     row-gap: 45px;
 
@@ -319,7 +319,7 @@ footer {
 }
 
 @media only screen and (max-width: 430px) {
-    body{
+    body {
         min-width: auto;
         min-height: auto;
         max-width: 100%;
@@ -332,13 +332,13 @@ footer {
         padding-top: 0;
     }
 
-    
+
     header h1,
     header p,
     header nav {
         margin: 0 46px 0 16px;
     }
-    
+
     header nav {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -346,6 +346,7 @@ footer {
         column-gap: 21px;
         margin: 56px 41px 0 38px;
     }
+
     header h1 {
         font-size: 40px;
         font-weight: bold;
@@ -394,92 +395,91 @@ footer {
         /* Tamanho da linha */
     }
 
-   .produtos {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    width: 100%;
-   }
+    .produtos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
 
-   .conteudoProduto {
-    display: flex;
-    flex-direction: row;  
-}
+    .conteudoProduto {
+        display: flex;
+        flex-direction: row;
+    }
 
-.info-produto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+    .info-produto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
-.info-produto button {
-    width: 50vw;
-}
+    .info-produto button {
+        width: 50vw;
+    }
 
-.descricaoDoProduto {
-    display: none;
-}
+    .descricaoDoProduto {
+        display: none;
+    }
 
-.retangulo {
-    width: 169px;
-    height: 129px;
-    margin-top: 23px;
-    margin-right: 23px;
-}
+    .retangulo {
+        width: 169px;
+        height: 129px;
+        margin-top: 23px;
+        margin-right: 23px;
+    }
 
-.precoPromocional {
-    font-size: 16px;
-}
+    .precoPromocional {
+        font-size: 16px;
+    }
 
-.info-produto h3 {
-    margin-bottom: 13px;
-}
+    .info-produto h3 {
+        margin-bottom: 13px;
+    }
 
-.compartilhe {
-    flex-direction: column;
-    width: 100%;
-}
+    .compartilhe {
+        flex-direction: column;
+        width: 100%;
+    }
 
-.compartilhe h2::after {
-    width: 50%;
-    /* Tamanho da linha */
-}
+    .compartilhe h2::after {
+        width: 50%;
+        /* Tamanho da linha */
+    }
 
-.compartilhe p {
-    margin: 28px 0 28px 0;
-}
+    .compartilhe p {
+        margin: 28px 0 28px 0;
+    }
 
 
-.compartilhe form div {
-    width: 100%;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-}
+    .compartilhe form div {
+        width: 100%;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
 
-.compartilhe form div .layout-personalizado {
-    margin-top: 20px;
-    margin-right: 0px;
-}
+    .compartilhe form div .layout-personalizado {
+        margin-top: 20px;
+        margin-right: 0px;
+    }
 
-.compartilhe input {
-    padding-top: 7px;
-    width: 100%;
-    height: 30px;
-}
+    .compartilhe input {
+        padding-top: 7px;
+        width: 100%;
+        height: 30px;
+    }
 
-.compartilhe form button {
-    width: 260px;
-    height: 39px;
-    margin-top: 42px;
-}
+    .compartilhe form button {
+        width: 260px;
+        height: 39px;
+        margin-top: 42px;
+    }
 
-footer {
-   min-width: 400px;
-   height: 25vh;
-   padding-top: initial;
-}
+    footer {
+        min-width: 400px;
+        height: 25vh;
+        padding-top: initial;
+    }
 
 }
