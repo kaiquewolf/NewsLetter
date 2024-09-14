@@ -15,7 +15,16 @@ async function fetchData() {
         // console.log(data);
         return data;
     } catch (error) {
+        switchModal();
+
+        window.onclick = function(event) {
+            const modal = document.querySelector('.modal')
+            if(event.target == modal) {
+                switchModal()
+            }
+        }
         console.error('Erro ao buscar dados: ', error);
+
     }
 }
 
@@ -67,9 +76,10 @@ async function loadInitialPage() {
 
 
 async function addNextPage() {
-    
     divConteudo = document.getElementById('produtos');
-    
+    btn = document.getElementById('botaoProdutos');
+    divBtn = document.getElementById('produtos');
+
     data = await fetchData();
     console.log(data);
 
@@ -81,6 +91,7 @@ async function addNextPage() {
 
         const div = document.createElement('div');
         div.classList.add('conteudoProduto');
+        div.id = "Conteudo2"
 
         div.innerHTML =
             `
@@ -95,12 +106,23 @@ async function addNextPage() {
                                         <p class="parcelamento">ou ${produto.installments.count}x de R$ ${produto.installments.value}</p>
                                         <button type="button">Comprar</button>
                     `
-                    divConteudo.insertBefore(div, null);
+        divConteudo.insertBefore(div, null);
     })
-
 }
 
+const switchModal = () => {
+    const modal = document.querySelector('.modal');
+    const estiloAtual = modal.style.display;
+
+    if(estiloAtual == "block") {
+        modal.style.display  = 'none'
+    } else {
+        modal.style.display = 'block'
+    }
+}
 
 // Carrega a primeira página de itens
 loadInitialPage();
+
+
 
