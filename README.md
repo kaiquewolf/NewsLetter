@@ -3,6 +3,8 @@
 
 Este é um projeto de uma aplicação web simples de **newsletter** integrada com um **marketplace**. O objetivo é permitir que usuários se inscrevam em uma newsletter e visualizem produtos de um marketplace integrado. Futuramente, o projeto será migrado para **React.js** para melhorar a escalabilidade e a manutenção do código.
 
+confira neste link: https://newsletterks.netlify.app
+
 ## 🚀 Tecnologias Utilizadas
 
 - **HTML5**: Estruturação da página
