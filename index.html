@@ -15,9 +15,9 @@
         <p>Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!</p>
         <nav>
             <button> Conheça a linx</button>
-            <button> Ajude o algoritmo</button>
-            <button> Seus produtos</button>
-            <button> Compartilhe</button>
+            <button onclick="ajude()"> Ajude o algoritmo</button>
+            <button onclick="seusProdutos()"> Seus produtos</button>
+            <button onclick="compartilhe()"> Compartilhe</button>
         </nav>
     </header>
     <main>
@@ -61,7 +61,7 @@
                     </p>
                 </article>
             </section>
-            <aside class="cadastro">
+            <aside class="cadastro" id="cadastro">
                 <form action="" name="fomulário de cadastro">
                     <label for="name">Seu nome:</label>
                     <input type="text" name="name" id="name" class="data" autocomplete="off" pattern="^[A-Za-zÀ-ÖØ-öø-ÿ]+(?: [A-Za-zÀ-ÖØ-öø-ÿ]+)*$" title="Por favor, insira um nome válido" required>
@@ -196,7 +196,7 @@
         </section>
 
         <section>
-            <article class="compartilhe">
+            <article class="compartilhe" id="compartilhe">
                 <h2>Compartilhe a novidade</h2>
                 <p>Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!</p>
 

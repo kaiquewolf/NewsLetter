@@ -120,6 +120,19 @@ const switchModal = () => {
     }
 }
 
+const seusProdutos = () => {
+    console.log('clicou')
+    window.location.href="#section";
+} 
+
+const compartilhe = () => {
+    window.location.href='#compartilhe'
+}
+
+const ajude = () => {
+    window.location.href="#cadastro"
+}
+
 // Carrega a primeira página de itens
 loadInitialPage();
 
